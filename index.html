@@ -1,23 +1,39 @@
 ---
 layout: default
 ---
+<div id="header">
+  <div class="container">
+    <div class="pull-left">
+      <img src="img/RID3870-gold.png" height="54px">
+      <div class="dowloadables">
+        <a href="#">TEAM</a>
+        <a href="#">INVITATION</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div id="landing">
+  <div class="banner-container">
+    <img id="gear" src="/img/gear.png"/>
+    <div class="banner-border">
+      <div class="banner">
+        <div class="container">
+          <h1>{{ 'District Assembly 2015' | upcase }}</h1>
+          <span><em>Club Leadership Training Seminar</em></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    APRIL 11, 2015<br>
+    Grand Caprice, Limketkai Center, Cagayan de Oro City
+  </p>
+  <div id="buttons"> 
+    <h3><a href="#" class="btn">SCHEDULE</a>
+    <a href="#" class="btn">REGISTER</a></h3>
+  </div>
+  <a href="#" id="arrow-down">
+    <img src="/img/arrow.png">
+  </a>
 </div>
