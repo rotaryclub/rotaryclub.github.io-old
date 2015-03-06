@@ -52,7 +52,7 @@ $on-laptop:        960px;
 @import "bootstrap/forms";
 @import "animations";
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "base";
+@import "base", "countdown";
 
 body{
     background-image: $background-image;
@@ -62,6 +62,28 @@ body{
 
 a{
     transition: all .5s;
+}
+
+.banner-border{
+    position: relative;
+    text-align: center;
+    padding: $spacing-unit/2 0;
+    border-top: 12px solid $brand-color;
+    border-bottom: 12px solid $brand-color;
+    -webkit-box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
+    .banner{
+        color: $grey-color;
+        background-color: $brand-color;
+        padding: $spacing-unit/2 0;
+        -webkit-box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
+        box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
+        h1{
+            margin: 0;
+        }
+    }
 }
 
 div#header{
@@ -92,26 +114,8 @@ div#landing{
             z-index: -1;
         }
         .banner-border{
-            position: relative;
             top: -256px;
             margin-bottom: -100px;
-            padding: $spacing-unit/2 0;
-            border-top: 12px solid $brand-color;
-            border-bottom: 12px solid $brand-color;
-            -webkit-box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
-            box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
-            .banner{
-                color: $grey-color;
-                background-color: $brand-color;
-                padding: $spacing-unit/2 0;
-                -webkit-box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
-                -moz-box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
-                box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
-                h1{
-                    margin: 0;
-                }
-            }
         }
     }
     div#buttons{
@@ -135,4 +139,63 @@ div#landing{
             opacity: 1;
         }
     }
+}
+
+div#countdown{
+    .banner-border{
+        margin: $spacing-unit*2 0 $spacing-unit;
+        .banner{
+            padding: $spacing-unit 0;
+        }
+    }
+}
+
+div#registration{
+    background-color: $brand-color;
+    color: $grey-color;
+    -webkit-box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
+    box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.75);
+    padding: $spacing-unit $spacing-unit;
+    margin-top: $spacing-unit;
+    ol{
+        margin: 0;
+    }
+    .ss-form-heading{
+        text-align: center;        
+        .ss-form-title{
+            font-family: $header-font-family;
+            margin-bottom: $spacing-unit/3;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 4px solid $grey-color;
+        }
+    }
+    .ss-required-asterisk{
+        color: $red;
+    }
+    .error, .required, .errorbox-bad {
+      border-color: $red;
+    }
+    input.ss-q-short{
+        padding: 4px 6px;
+        border: 1px solid $grey-color-light;
+    }
+    .btn{
+            padding: 6px $spacing-unit/2;
+            margin-top: $spacing-unit;
+            border: none;
+            background-color: transparent;
+            border-top: 4px solid $grey-color;
+            border-bottom: 4px solid $grey-color;   
+            cursor: pointer;
+            &:hover{
+                text-decoration: none;
+                color: $grey-color-dark;
+                border-top: 4px solid $grey-color-light;
+                border-bottom: 4px solid $grey-color-light; 
+            }
+        }
 }
